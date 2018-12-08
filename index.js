@@ -24,6 +24,6 @@ request(url,function(err,res,body){
         // console.log(baseUrl.concat(i,suffix))
         setTimeout(function(){
             Female(baseUrl.concat(i,suffix))
-        },1000*i)
+        },1500*i)
     }
 })
