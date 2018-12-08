@@ -13,33 +13,39 @@ var knex = require('knex')({
     host : '127.0.0.1',
     user : 'root',
     password : 'root',
-    database : 'nanvip',
+    database : 'ssbc',
     port: '3306',
   }
 });
 
-knex('nuyou_info').where({name:wd}).select('id').then(res=>{
-    if(res.length == 0){
-        knex('nuyou_info')
-            .insert({
-                name: option.name,
-                desc: option.desc,
-                enname: option.enname,
-                work_num: option.work_num,
-                birthday: option.birthday,
-                debut: option.debut,
-                sanwei: option.sanwei,
-                chest: option.chest,
-                avator : option.avator,
-                add_date: now,
-                mod_date: now,
-            }).then(res=>{
-            console.log('res',res)
-        })
-    } else {
-        console.log('已有数据,请勿插入')
+var app = function (option){
+    if(option.name == '' || option.name == undefined){
+        return
     }
-})
-
+    knex('person_person').where({name:option.name}).select('id').then(res=>{
+        if(res.length == 0){
+            knex('person_person')
+                .insert({
+                    name: option.name,
+                    desc: option.desc,
+                    enname: option.enname,
+                    work_num: option.work_num,
+                    birthday: option.birthday,
+                    debut: option.debut,
+                    sanwei: option.sanwei,
+                    chest: option.chest,
+                    avatar : option.avatar,
+                    hit: option.hit,
+                    add_date: now,
+                    mod_date: now,
+                }).then(res1=>{
+                console.log('人物结束ID：',res1)
+            })
+        } else {
+            console.log('人物表,已有数据,请勿插入')
+        }
+    })
+}
+module.exports = app
 
 
