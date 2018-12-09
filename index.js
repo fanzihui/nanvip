@@ -9,7 +9,7 @@ const baseUrl = 'http://nanrenvip.xyz/nvyouku/1-0-0-0-0-0-'
 const zero = 0
 const suffix = '.html'
 const url = baseUrl.concat(zero,suffix)
-const want_page = 1
+const want_page = 54
 request(url,function(err,res,body){
     if(body == '' || body == undefined){
         return
@@ -20,10 +20,14 @@ request(url,function(err,res,body){
     console.log('page_total',page_total)
     let spider_page = want_page || page_total
     console.log(spider_page)
-    for(var i = 0 ; i <= spider_page; i++){
-        // console.log(baseUrl.concat(i,suffix))
-        setTimeout(function(){
-            Female(baseUrl.concat(i,suffix))
-        },1500*i)
+    for(var i = spider_page ; i <= spider_page+2; i++){
+        (function(i){
+            setTimeout(function(){
+                console.log('开始时间:', Date.now())
+                console.log(baseUrl.concat(i,suffix));
+                Female(baseUrl.concat(i,suffix))
+                console.log('结束时间:', Date.now())
+            },100*i)
+        })(i)
     }
 })
