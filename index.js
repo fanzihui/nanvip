@@ -4,8 +4,8 @@
 // http://nanrenvip.xyz/nvyouku/1-0-0-0-0-0-2.html
 const Crawler = require("crawler");
 const List = require('./list')
-const Domain = 'http://nanrenvip.xyz'
-const baseUrl = 'http://nanrenvip.xyz/nvyouku/1-0-0-0-0-0-'
+const Domain = 'http://nanrenvip.cc'
+const baseUrl = 'http://nanrenvip.cc/nvyouku/1-0-0-0-0-0-'
 const zero = 0
 const suffix = '.html'
 const want_page = 54
@@ -27,8 +27,9 @@ var c = new Crawler({
                 let name = $(this).find('span').text()
                 let link = Domain + $(this).find('a').attr('href')
                 let avatar = Domain + $(this).find('img').attr('data-original')
-                console.log(`index: ${index} name: ${name} \n link ${link} \n avator ${avatar}`)
-                // http://nanrenvip.xyz/nvyouku/ssyouya.html
+                // console.log(`index: ${index} name: ${name} \n link ${link} \n avator ${avatar}`)
+                // http://nanrenvip.cc/nvyouku/ssyouya.html
+
                 List(link)
             })
         }
