@@ -30,6 +30,8 @@ var c = new Crawler({
                 let avatar = Domain + $(this).find('img').attr('data-original')
                 console.log(`index: ${index} name: ${name} \n link ${link} \n avator ${avatar}`)
                 // http://nanrenvip.cc/nvyouku/ssyouya.html
+                // console.log(`index: ${index} name: ${name} \n link ${link} \n avator ${avatar}`)
+                // http://nanrenvip.cc/nvyouku/ssyouya.html
                 List(link)
             })
         }

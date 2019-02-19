@@ -1,9 +1,26 @@
 const Crawler = require("crawler");
 const Domain = 'http://nanrenvip.cc';
-
 const NameSql = require('./nameSql')
 const SaveImg = require('./saveImg')
 const Info = require('./info')
+const http = require('http');
+const fs = require('fs')
+const Domain = 'http://nanrenvip.cc'
+function saveImage(url,path) {
+    http.get(url,function (req,res) {
+        var imgData = '';
+        req.on('data',function (chunk) {
+            imgData += chunk;
+        })
+		req.setEncoding('binary');
+        req.on('end',function () {
+            fs.writeFileSync(path,imgData,'binary',function (err) {
+                console.log('保存图片成功'+path)
+            })
+        })
+    })
+}
+
 var app = function(url){
     // console.log('url',url)
     var c = new Crawler({
@@ -53,6 +70,9 @@ var app = function(url){
                     chest: format(chest),
                     hit: Math.ceil(Math.random()*10),
                 }
+                // 下载图片
+                var imgPath= __dirname + "/images/"+ avatar.split('/')[avatar.split('/').length-1];
+                saveImage(avatar,imgPath)
                 // console.log(option)
                 SaveImg(avatar)
                 NameSql(option)
