@@ -1,12 +1,15 @@
 const Crawler = require("crawler");
-const Domain = 'http://nanrenvip.xyz'
+const Domain = 'http://nanrenvip.cc';
+
 const NameSql = require('./nameSql')
+const SaveImg = require('./saveImg')
 const Info = require('./info')
 var app = function(url){
     // console.log('url',url)
     var c = new Crawler({
         maxConnections : 10,
         forceUTF8:false,
+        rateLimit: 100,
         callback : function (error, res, done) {
             if(error){
                 console.log(error);
@@ -39,7 +42,7 @@ var app = function(url){
                     return val.split('：')[1]
                 }
                 option = {
-                    avatar: avatar,
+                    avatar: avatar.replace(/(.+\/)(\w+\.jpg)/g,'$2'),
                     name: name,
                     enname: format(enname),
                     desc: desc,
@@ -51,13 +54,14 @@ var app = function(url){
                     hit: Math.ceil(Math.random()*10),
                 }
                 // console.log(option)
-                // NameSql(option)
+                SaveImg(avatar)
+                NameSql(option)
                 $('.zp_list .avps_list ul li').each(function(index,ele){
                     if(!$(this).hasClass('nom')){
                         title = $(this).find('a').text()
                         link = Domain + $(this).find('a').attr('href')
                         // console.log(`title:${title} \n link${link} \n -----------`)
-                        Info({name: name, link:link})
+                        // Info({name: name, link:link})
                     }
                 })
             }

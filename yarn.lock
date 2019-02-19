@@ -72,6 +72,11 @@ asynckit@^0.4.0:
   version "0.4.0"
   resolved "http://registry.npm.taobao.org/asynckit/download/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
 
+atob-lite@^2.0.0:
+  version "2.0.0"
+  resolved "http://registry.npm.taobao.org/atob-lite/download/atob-lite-2.0.0.tgz#0fef5ad46f1bd7a8502c65727f0367d5ee43d696"
+  integrity sha1-D+9a1G8b16hQLGVyfwNn1e5D1pY=
+
 atob@^2.1.1:
   version "2.1.2"
   resolved "http://registry.npm.taobao.org/atob/download/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
@@ -384,6 +389,11 @@ double-ended-queue@^2.1.0-0:
   version "2.1.0-0"
   resolved "http://registry.npm.taobao.org/double-ended-queue/download/double-ended-queue-2.1.0-0.tgz#103d3527fd31528f40188130c841efdd78264e5c"
 
+dtype@^2.0.0:
+  version "2.0.0"
+  resolved "http://registry.npm.taobao.org/dtype/download/dtype-2.0.0.tgz#cd052323ce061444ecd2e8f5748f69a29be28434"
+  integrity sha1-zQUjI84GFETs0uj1dI9popvihDQ=
+
 ecc-jsbn@~0.1.1:
   version "0.1.2"
   resolved "http://registry.npm.taobao.org/ecc-jsbn/download/ecc-jsbn-0.1.2.tgz#3a83a904e54353287874c564b7549386849a98c9"
@@ -471,6 +481,11 @@ fast-json-stable-stringify@^2.0.0:
   version "2.0.0"
   resolved "http://registry.npm.taobao.org/fast-json-stable-stringify/download/fast-json-stable-stringify-2.0.0.tgz#d5142c0caee6b1189f87d3a76111064f86c8bbf2"
 
+file-saver@^2.0.0-rc.4:
+  version "2.0.1"
+  resolved "http://registry.npm.taobao.org/file-saver/download/file-saver-2.0.1.tgz#7fe2242af1cbc559a29d8176078a8b56d781fa79"
+  integrity sha1-f+IkKvHLxVminYF2B4qLVteB+nk=
+
 fill-range@^4.0.0:
   version "4.0.0"
   resolved "http://registry.npm.taobao.org/fill-range/download/fill-range-4.0.0.tgz#d544811d428f98eb06a63dc402d2403c328c38f7"
@@ -502,6 +517,13 @@ fined@^1.0.1:
 flagged-respawn@^1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/flagged-respawn/download/flagged-respawn-1.0.0.tgz#4e79ae9b2eb38bf86b3bb56bf3e0a56aa5fcabd7"
+
+flatten-vertex-data@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/flatten-vertex-data/download/flatten-vertex-data-1.0.2.tgz#889fd60bea506006ca33955ee1105175fb620219"
+  integrity sha1-iJ/WC+pQYAbKM5Ve4RBRdftiAhk=
+  dependencies:
+    dtype "^2.0.0"
 
 flexbuffer@0.0.6:
   version "0.0.6"
@@ -637,6 +659,11 @@ http-signature@~1.2.0:
     jsprim "^1.2.2"
     sshpk "^1.7.0"
 
+http@^0.0.0:
+  version "0.0.0"
+  resolved "http://registry.npm.taobao.org/http/download/http-0.0.0.tgz#86e6326d29c5d039de9fac584a45689f929f4f72"
+  integrity sha1-huYybSnF0Dnen6xYSkVon5KfT3I=
+
 iconv-lite@^0.4.8:
   version "0.4.24"
   resolved "http://registry.npm.taobao.org/iconv-lite/download/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"
@@ -684,9 +711,29 @@ is-accessor-descriptor@^1.0.0:
   dependencies:
     kind-of "^6.0.0"
 
+is-base64@^0.1.0:
+  version "0.1.0"
+  resolved "http://registry.npm.taobao.org/is-base64/download/is-base64-0.1.0.tgz#a6f20610c6ef4863a51cba32bc0222544b932622"
+  integrity sha1-pvIGEMbvSGOlHLoyvAIiVEuTJiI=
+
+is-blob@^1.0.0:
+  version "1.0.0"
+  resolved "http://registry.npm.taobao.org/is-blob/download/is-blob-1.0.0.tgz#a3d7d96fe1c3ff065ec7ce27c2c21e6ba92c1832"
+  integrity sha1-o9fZb+HD/wZex84nwsIea6ksGDI=
+
+is-blob@^2.0.1:
+  version "2.0.1"
+  resolved "http://registry.npm.taobao.org/is-blob/download/is-blob-2.0.1.tgz#7fde57ef8782a154bc0f3bdcaa0ffdccb6c33767"
+  integrity sha1-f95X74eCoVS8Dzvcqg/9zLbDN2c=
+
 is-buffer@^1.1.5:
   version "1.1.6"
   resolved "http://registry.npm.taobao.org/is-buffer/download/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
+
+is-buffer@^2.0.0:
+  version "2.0.3"
+  resolved "http://registry.npm.taobao.org/is-buffer/download/is-buffer-2.0.3.tgz#4ecf3fcf749cbd1e472689e109ac66261a25e725"
+  integrity sha1-Ts8/z3ScvR5HJonhCaxmJhol5yU=
 
 is-data-descriptor@^0.1.4:
   version "0.1.4"
@@ -1329,6 +1376,18 @@ safe-regex@^1.1.0:
   version "2.1.2"
   resolved "http://registry.npm.taobao.org/safer-buffer/download/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
 
+save-file@^2.3.0:
+  version "2.3.0"
+  resolved "http://registry.npm.taobao.org/save-file/download/save-file-2.3.0.tgz#991d599b9af838183383de43cce5d76dd89a4b39"
+  integrity sha1-mR1Zm5r4OBgzg95DzOXXbdiaSzk=
+  dependencies:
+    file-saver "^2.0.0-rc.4"
+    is-blob "^1.0.0"
+    is-buffer "^2.0.0"
+    simple-mime "^0.1.0"
+    to-array-buffer "^3.2.0"
+    write "^1.0.0"
+
 seenreq@^0.1.7:
   version "0.1.14"
   resolved "http://registry.npm.taobao.org/seenreq/download/seenreq-0.1.14.tgz#fbf1993bd9a31549d60c85be3d622c32b64eb8a0"
@@ -1360,6 +1419,11 @@ set-value@^2.0.0:
     is-extendable "^0.1.1"
     is-plain-object "^2.0.3"
     split-string "^3.0.1"
+
+simple-mime@^0.1.0:
+  version "0.1.0"
+  resolved "http://registry.npm.taobao.org/simple-mime/download/simple-mime-0.1.0.tgz#95f517c4f466d7cff561a71fc9dab2596ea9ef2e"
+  integrity sha1-lfUXxPRm18/1YacfydqyWW6p7y4=
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
@@ -1437,6 +1501,14 @@ static-extend@^0.1.1:
     define-property "^0.2.5"
     object-copy "^0.1.0"
 
+string-to-arraybuffer@^1.0.0:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/string-to-arraybuffer/download/string-to-arraybuffer-1.0.2.tgz#161147fbadea02e28b0935002cec4c40f1ca7f0a"
+  integrity sha1-FhFH+63qAuKLCTUALOxMQPHKfwo=
+  dependencies:
+    atob-lite "^2.0.0"
+    is-base64 "^0.1.0"
+
 string_decoder@^1.1.1:
   version "1.2.0"
   resolved "http://registry.npm.taobao.org/string_decoder/download/string_decoder-1.2.0.tgz#fe86e738b19544afe70469243b2a1ee9240eae8d"
@@ -1470,6 +1542,15 @@ tildify@1.2.0:
   resolved "http://registry.npm.taobao.org/tildify/download/tildify-1.2.0.tgz#dcec03f55dca9b7aa3e5b04f21817eb56e63588a"
   dependencies:
     os-homedir "^1.0.0"
+
+to-array-buffer@^3.2.0:
+  version "3.2.0"
+  resolved "http://registry.npm.taobao.org/to-array-buffer/download/to-array-buffer-3.2.0.tgz#cb684dd691a7368c3b249c2348d75227f7d4dbb4"
+  integrity sha1-y2hN1pGnNow7JJwjSNdSJ/fU27Q=
+  dependencies:
+    flatten-vertex-data "^1.0.2"
+    is-blob "^2.0.1"
+    string-to-arraybuffer "^1.0.0"
 
 to-object-path@^0.3.0:
   version "0.3.0"
@@ -1588,3 +1669,10 @@ which@^1.2.14:
   resolved "http://registry.npm.taobao.org/which/download/which-1.3.1.tgz#a45043d54f5805316da8d62f9f50918d3da70b0a"
   dependencies:
     isexe "^2.0.0"
+
+write@^1.0.0:
+  version "1.0.3"
+  resolved "http://registry.npm.taobao.org/write/download/write-1.0.3.tgz#0800e14523b923a387e415123c865616aae0f5c3"
+  integrity sha1-CADhRSO5I6OH5BUSPIZWFqrg9cM=
+  dependencies:
+    mkdirp "^0.5.1"

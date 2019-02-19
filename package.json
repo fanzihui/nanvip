@@ -6,9 +6,11 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "crawler": "^1.2.0",
+    "http": "^0.0.0",
     "knex": "^0.15.2",
     "moment": "^2.22.2",
     "mysql": "^2.16.0",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "save-file": "^2.3.0"
   }
 }

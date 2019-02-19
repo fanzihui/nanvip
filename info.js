@@ -1,5 +1,5 @@
 const Crawler = require("crawler");
-const Domain = 'http://nanrenvip.xyz'
+const Domain = 'http://nanrenvip.cc'
 const WorkSql = require('./workSql')
 var app = function(param){
     if(param.name == '' || param.name == undefined){
@@ -9,6 +9,7 @@ var app = function(param){
     var c = new Crawler({
         maxConnections : 10,
         forceUTF8:false,
+        rateLimit: 100,
         callback : function (error, res, done) {
             if(error){
                 console.log(error);
