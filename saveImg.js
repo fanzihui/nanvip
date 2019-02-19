@@ -18,7 +18,7 @@ var app = async function(url){
            //请求完成执行的回调
            res.on('end', () => {
                // 通过文件流操作保存图片
-               fs.writeFile(`./images/${name}.jpg`, imgData, 'binary', (error) => {
+               fs.writeFile(`./images/${name}`, imgData, 'binary', (error) => {
                     console.log(error)
                    if (error) {
                        console.log('下载失败');
